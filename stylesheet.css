@@ -1,0 +1,243 @@
+/* section {
+	display: none;
+}
+section.active {
+	display: block;
+} */
+body {
+	background-color: #404040;
+	color: white;
+	text-align: center;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+select {
+	padding-left: .2vw;
+	padding-right: 1vw;
+}
+button {
+	border-radius: 5px;
+	padding-right: 1vw;
+	padding-left: 1vw;
+	padding-top: .5vw;
+	padding-bottom: .5vw;
+	background-color: #ffffff;
+	margin-bottom: 25px;
+}
+
+nav {
+	background-color: #333;
+	overflow: hidden;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	float: left;
+}
+
+nav ul li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 18px 18px;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	background-color: #111;
+}
+
+table {
+	width: 90%;
+	border-collapse:collapse;
+	border: 1px solid #ffffff;
+	margin: 20px auto;
+	border-radius: 5px;
+}
+th, td {
+	border: 1px solid #ffffff;
+	padding: 5px;
+	text-align: left;
+	vertical-align: middle;
+	line-height: 1;
+}
+th {
+	background-color:darkblue;
+}
+td {
+	padding: 5px;
+}
+td > button {
+	width: calc(50% - 5px);
+    margin-right: 5px;
+    padding: 5px 10px;
+    cursor:pointer;
+    margin:auto;
+	vertical-align: middle;
+}
+
+td:last-child {
+    text-align: center;
+	vertical-align: middle;
+}
+
+.flex-box-1 {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: center;
+}
+.flex-box-1 > div {
+	display: flex;
+	color: white;
+	margin:5px;
+	padding: 5vw;
+	flex-direction: column;
+}
+.flex-box-2 {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+.flex-box-2 > label,
+.flex-box-2 > input,
+.flex-box-2 > button {
+    width: 50%;
+    margin-bottom: 0px;
+}
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+.pagination {
+	cursor: pointer;
+}
+
+#incorrect-login {
+	display:block;
+	/* vertical-align: middle; */
+	/* margin-left:100px; */
+	float:right;
+	margin-right: 20px;
+	margin-left: 20px;
+	padding-left: 800px;
+	align-items: self-end;
+}
+#container-a {
+	width: 85%;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #303030;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#container-b {
+	width: 85%;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #303030;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#postcode-list, #postcode-info, #distance-calculation {
+	margin: 20px 0;
+}
+
+#distanceResult {
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 30%;
+	padding: 15px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	color: #333;
+	text-align: center;
+}
+
+#distanceResult p {
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+#distanceResult ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#distanceResult ul li {
+	margin-bottom: 5px;
+	font-size: 14px;
+	color: #555;
+}
+
+.scrollable-container {
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+#login-form {
+	display: flex;
+	align-items: center;
+	margin:9px;
+	float: right;
+}
+#login-form input[type="text"], 
+#login-form input[type="password"] {
+	margin-right: 10px;
+	padding: 4px 10px;
+}
+#login-form input[type="submit"] {
+	padding: 8px 16px;
+	background-color:green;
+	color: rgb(255, 255, 255);
+	border-radius: 5px;
+	cursor: pointer;
+}
+#logout-form {
+	display: flex;
+	align-items: center;
+	margin:9px;
+	margin-right: 10px;
+	float: right;
+	padding: 8px 16px;
+	background-color:darkred;
+	color: rgb(255, 255, 255);
+	border-radius: 5px;
+	cursor: pointer;
+	
+}
+#logout-form:hover {
+	background-color: maroon;
+}
+#result-box {
+	margin-top: 20px;
+	margin-left: 250px;
+	margin-right: 250px;
+	padding: 10px;
+	border: 1px solid #505050;
+	border-radius: 5px;
+	background-color: #dddddd;
+	display: none;
+	color:#000000;
+}

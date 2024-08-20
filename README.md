@@ -1,0 +1,1 @@
+The admin script allows for both manual and auto lat/long entry. Click the "Fetch" button in order to fetch data from https://postcodes.io/.

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Postcode Information</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+		</ul>
+		<label id="incorrect-login"> </label>
+		<form id="login-form" onsubmit="return login(event)" method="post">
+			<input type="text" name="username" placeholder="Username" required>
+			<input type="password" name="password" placeholder="Password" required>
+			<input type="submit" value="Login">
+		</form>
+	</nav>
+
+	<h1>Postcode look-up</h1>
+	<div id="container-a">
+		<div class="flex-box-1">
+			<div>    
+				<label for="postcode-dropdown-1">Postcode A</label>
+				<select id="postcode-dropdown-1">
+					<!-- Options will be populated by Script.js -->
+				</select>
+			</div>
+			<div>
+				<label for="postcode-dropdown-2">Postcode B</label>
+				<select id="postcode-dropdown-2">
+					<!-- Options will be populated by Script.js -->
+				</select>
+			</div>
+		</div>
+		<div id="result-box"></div>
+	</div>
+</body>
+</html>

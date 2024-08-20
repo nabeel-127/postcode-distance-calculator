@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Manage Postcodes</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="dashboard.html">Home</a></li>
+		</ul>
+		<button id="logout-form" onclick="logout()">Logout</button>
+	</nav>
+
+	<h1>Postcode look-up</h1>
+	<div id="container-a">
+		<div class="flex-box-1">
+			<div> 
+				<label for="postcode-dropdown-1">Postcode A</label>
+				<select id="postcode-dropdown-1">
+					<!-- Options will be populated by Script.js -->
+				</select> 
+			</div>
+			<div>
+				<label for="postcode-dropdown-2">Postcode A</label>
+				<select id="postcode-dropdown-2">
+					<!-- Options will be populated by Script.js -->
+				</select>
+			</div>
+		</div>
+		<div id="result-box"></div>
+	</div>
+	<br>
+	<h1>Manage Postcodes</h1>
+	<div id="container-b">
+		<input type="text" id="search-box" placeholder="Search" style="margin: 20px auto; display: block; padding: 5px; width: 15%;">
+
+			<table id="postcode-table">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Postcode</th>
+						<th>Latitude</th>
+						<th>Longitude</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody id="postcode-table-body">
+					<!-- Table rows will be populated by Script.js -->
+				</tbody>
+			</table>
+
+		<!-- <button id="add-postcode">Add Postcode</button> -->
+		
+		<div id="pagination"></div>	
+
+		<div id="postcode-modal" class="modal">
+			<!-- <span class="close">&times;</span> -->
+			<form id="postcode-form" onsubmit="return updatePostcodeDB(event)" class="flex-box-2">
+				<input type="hidden" id="postcodeID">
+				<label for="postcode">Postcode</label>
+				<input type="text" id="postcode" name="postcode" required pattern="[a-zA-Z0-9]+" maxlength="7" title="Postcode can only contain letters and numbers" style="margin-bottom: 5px">
+				<label for="latitude">Latitude</label>
+				<input type="number" step="0.000001" id="latitude" name="latitude" required style="margin-bottom: 5px" min="-90" max="90" title="Latitude must be between -90 and 90">
+				<label for="longitude">Longitude</label>
+				<input type="number" step="0.000001" id="longitude" name="longitude" required style="margin-bottom: 5px" min="-180" max="180" title="Longitude must be between -180 and 180">
+				<button type="button" onclick="fetchPostcode()" style="margin-top: 10px; cursor: pointer;">Fetch</button>
+				<button type="submit" style="margin-top: 10px; cursor: pointer;">Save</button>
+			</form>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div style="background: #323232; text-align: center; color:white; padding-top: 10px; padding-bottom: 12px; font-size: 14px; width: 100%; margin-top: 20px;">
+		Data provided by the MIT open-source API:<a href="https://postcodes.io/" target="_blank" style="color:aqua; text-decoration: none;"> Postcodes.io </a> 
+	</div>
+</body>
+</html>
